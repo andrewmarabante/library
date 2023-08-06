@@ -1,1 +1,2 @@
 # library
+Now that I'm getting a kinda good at css and html, it's time to work on my javascript! In this project I'm going to be creating a library where users can add or remove books that have their own corresponding information. They will also be able to inquire information about books!! Let's get started!!! 
