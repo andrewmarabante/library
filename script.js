@@ -5,10 +5,6 @@ let book3 = new book('Crystal Cove', 'John Cry', '1934', 'Adventure');
 let book4 = new book('Diaries of Manhattan', 'Mike Hawk', '1934', 'Drama');
 let book5 = new book('Guns', 'Jack Johnson', '1934', 'Action');
 document.getElementById('form').addEventListener('submit',addBook);
-const removeButtons = document.getElementsByClassName("remove");
-for (var i = 0; i < removeButtons.length; i++) {
-    removeButtons[i].addEventListener('click', removeBook);
-}
 
 function book(title,author,year,genre)
 {
@@ -16,6 +12,7 @@ function book(title,author,year,genre)
     this.author = author;
     this.year = year;
     this.genre = genre;
+    this.read = 'false';
     myLibrary.push(this);
     displayBook(this);
 }
@@ -38,8 +35,9 @@ function displayBook(book)
     const author = document.createElement("p");
     const year = document.createElement("p");
     const genre = document.createElement("p");
-    const remove = document.createElement("button")
-    
+    const remove = document.createElement("button");
+    const read = document.createElement("button");
+
     book.innerHTML = '';
     title.innerHTML = book.title;
     author.innerHTML = book.author;
@@ -48,6 +46,9 @@ function displayBook(book)
     remove.innerHTML = 'Remove';
     remove.classList.add('remove');
     remove.addEventListener('click', removeBook);
+    read.innerHTML = 'Read';
+    read.bool = book.read;
+    read.addEventListener('click', toggleRead);
 
     library.appendChild(div);
     div.appendChild(title);
@@ -55,9 +56,26 @@ function displayBook(book)
     div.appendChild(year);
     div.appendChild(genre);
     div.appendChild(remove);
+    div.appendChild(read);
 }
 
 function removeBook()
 {
     this.parentElement.remove();
+}
+
+function toggleRead()
+{
+    if(this.bool === 'false')
+    {
+        this.bool = 'true';
+        this.classList.add('read')
+        console.log(this.bool);
+    }
+    else
+    {
+        this.bool = 'false';
+        this.classList.remove('read')
+        console.log(this.bool);
+    }
 }
