@@ -5,7 +5,8 @@ let book3 = new book('Crystal Cove', 'John Cry', '1934', 'Adventure');
 let book4 = new book('Diaries of Manhattan', 'Mike Hawk', '1934', 'Drama');
 let book5 = new book('Guns', 'Jack Johnson', '1934', 'Action');
 document.getElementById('form').addEventListener('submit',addBook);
-
+document.getElementById("form").style.display="none";
+document.getElementById("add").addEventListener('click', toggleHide)
 function book(title,author,year,genre)
 {
     this.title = title;
@@ -77,5 +78,21 @@ function toggleRead()
         this.bool = 'false';
         this.classList.remove('read')
         console.log(this.bool);
+    }
+}
+
+function toggleHide()
+{
+    const form = document.getElementById("form")
+    if(form.style.display === 'none')
+    {
+        form.style.display="block";
+        document.getElementById('add').innerHTML = 'Hide';
+
+    }
+    else
+    {
+        form.style.display="none";
+        document.getElementById('add').innerHTML = 'Add a Book';
     }
 }
