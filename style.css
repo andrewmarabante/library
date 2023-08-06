@@ -1,11 +1,105 @@
 #library{
+    flex: 5;
+    background-color: rgb(216, 169, 69);
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(auto, auto);
+    gap: 1em;
+    padding: 1em;
+    border-top: groove 1em black;
 }
+
 .remove{
     background-color: red;
+    border: none;
+    padding: .5em;
+    border-radius: .5em;
+    padding-left: 2em;
+    padding-right: 2em;
 }
+
 .read{
-    background-color: blue;
+    background-color: rgb(65, 146, 223);
+}
+
+.readbutton{
+    border: none;
+    border-radius: .5em;
+    padding: .5em;
+    padding-left: .7em;
+    padding-right: .7em;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 110vh;
+}
+
+.top{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: .5em;
+}
+
+.libtitle{
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+.formstyle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1em;
+    align-items: center;
+    padding: 1em;
+    background-color: rgb(228, 124, 124);
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.row2{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+form input{
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(153, 201, 201);
+    padding: .6em;
+    text-align: center;
+}
+#add{
+    background-color: rgb(101, 184, 223);
+    border: none;
+    border-radius: 6px;
+    padding: .5em;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+#library div{
+    border: solid 1px black;
+    border-right: groove 1em white;
+    background-color: rgb(150, 51, 51);
+    border-radius: .5em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#subbut{
+    border: none;
+    border-radius: .5em;
+    padding: .5em;
 }

@@ -47,8 +47,9 @@ function displayBook(book)
     remove.innerHTML = 'Remove';
     remove.classList.add('remove');
     remove.addEventListener('click', removeBook);
-    read.innerHTML = 'Read';
+    read.innerHTML = 'Mark as Read';
     read.bool = book.read;
+    read.classList.add('readbutton')
     read.addEventListener('click', toggleRead);
 
     library.appendChild(div);

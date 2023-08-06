@@ -8,18 +8,29 @@
 </head>
 <body>
     <form id="form" action="/">
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title" placeholder="The Dawn">
-        <label for="author">Author:</label>
-        <input type="text" id="author" name="author" placeholder="John Atkins">
-        <label for="year">Year:</label>
-        <input type="text" id="year" name="year" placeholder="1998">
-        <label for="genre">Genre:</label>
-        <input type="text" id="genre" name="genre" placeholder="Horror">
-        <button type="submit">Submit</button>
+        <div class="formstyle">
+            <div class="row1">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" placeholder="The Dawn">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" placeholder="John Atkins">
+            </div>
+            <div class="row2">
+                <label for="year">Year:</label>
+                <input type="text" id="year" name="year" placeholder="1998">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" placeholder="Horror">
+            </div>
+            <button id="subbut" type="submit">Submit</button>
+        </div>
     </form>
-    <button id="add">Add a Book</button>
-    <div id="library"></div>
+    <div class="container">
+        <div class="top">
+            <div class="libtitle">Welcome To the Library!:</div>
+            <button id="add">Add a Book</button>
+        </div>
+        <div id="library"></div>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
