@@ -28,7 +28,6 @@ function addBook(e)
     const year = document.getElementById('year').value;
     const genre = document.getElementById('genre').value;
     let newBook = new book(title,author,year,genre);
-    console.log(myLibrary[5]);
 }
 
 function displayBook(book)
@@ -48,6 +47,7 @@ function displayBook(book)
     genre.innerHTML = book.genre;
     remove.innerHTML = 'Remove';
     remove.classList.add('remove');
+    remove.addEventListener('click', removeBook);
 
     library.appendChild(div);
     div.appendChild(title);
