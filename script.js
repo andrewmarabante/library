@@ -28,19 +28,26 @@ function addBook(e)
 }
 
 function displayBook(book)
-{
+{   
+    const library = document.getElementById('library')
+    const div = document.createElement('div');
     const title = document.createElement("h4");
     const author = document.createElement("p");
     const year = document.createElement("p");
     const genre = document.createElement("p");
+    const remove = document.createElement("button")
     
+    book.innerHTML = '';
     title.innerHTML = book.title;
     author.innerHTML = book.author;
     year.innerHTML = book.year;
-    genre.innerHTML= book.genre;
+    genre.innerHTML = book.genre;
+    remove.innerHTML = 'Remove';
 
-    document.body.append(title);
-    document.body.append(author);
-    document.body.append(year);
-    document.body.append(genre);
+    library.appendChild(div);
+    div.appendChild(title);
+    div.appendChild(author);
+    div.appendChild(year);
+    div.appendChild(genre);
+    div.appendChild(remove);
 }
